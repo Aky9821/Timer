@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="58dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="upFxn"
+                android:tag="hour"
+                app:icon="@android:drawable/arrow_up_float"
+                app:iconGravity="textTop" />
+
+            <Button
+                android:id="@+id/mUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="upFxn"
+                android:layout_weight="1"
+                android:tag="minute"
+                app:icon="@android:drawable/arrow_up_float"
+                app:iconGravity="textTop" />
+
+
+            <Button
+                android:id="@+id/sUp"
+                android:tag="second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="upFxn"
+                android:layout_weight="1"
+                app:icon="@android:drawable/arrow_up_float"
+                app:iconGravity="textTop" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/hour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="bottom|center_horizontal"
+                android:hint="HH"
+
+                android:inputType="number"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/minute"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:maxLength="2"
+                android:gravity="bottom|center_horizontal"
+                android:hint="MM"
+                android:inputType="number"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="bottom|center_horizontal"
+                android:hint="SS"
+                android:maxLength="2"
+                android:inputType="number"
+                android:textSize="42sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="downFxn"
+                android:tag="hour"
+                app:icon="@android:drawable/arrow_down_float"
+                app:iconGravity="textTop" />
+
+            <Button
+                android:id="@+id/mDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_marginStart="10dp"
+                android:tag="minute"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="downFxn"
+                app:icon="@android:drawable/arrow_down_float"
+                app:iconGravity="textTop" />
+
+
+            <Button
+                android:id="@+id/sDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:tag="second"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:onClick="downFxn"
+                app:icon="@android:drawable/arrow_down_float"
+                app:iconGravity="textTop" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:onClick="clickFxn"
+            app:srcCompat="@drawable/hourglass" />
+
+        <TextView
+            android:id="@+id/stateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="28dp"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
